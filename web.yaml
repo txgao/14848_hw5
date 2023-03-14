@@ -33,7 +33,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web_serv
+  name: web-serv
 spec:
   type: LoadBalancer
   ports:
