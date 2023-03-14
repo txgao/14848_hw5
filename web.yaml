@@ -21,7 +21,7 @@ spec:
         app: web
     spec:
       containers:
-      - image: rinormaloku/sentiment-analysis-web-app
+      - image: tx640/hw5_web:v1
         imagePullPolicy: Always
         name: web
         env:
