@@ -9,4 +9,4 @@ spec:
     - name: web
       image: tx640/hw5_web:v1
       ports:
-        - containerPort: 8000
+        - containerPort: 8080
