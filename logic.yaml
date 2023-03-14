@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logic
+  labels:
+    app: logic
+spec:
+  selector:
+     matchLabels:
+       app: logic
+  replicas: 2
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: 
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata:
+      labels:
+        app: logic
+    spec:
+      containers:
+        - image: tx640/hw5_logic:v1
+          imagePullPolicy: Always
+          name: logic
+          ports:
+            - containerPort: 5000
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: logic_serv
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 5000
+  selector:
+    app: logic_serv
