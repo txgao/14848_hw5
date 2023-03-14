@@ -30,7 +30,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: logic_serv
+  name: logic-serv
 spec:
   ports:
     - port: 80
