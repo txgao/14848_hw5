@@ -37,4 +37,4 @@ spec:
       protocol: TCP
       targetPort: 5000
   selector:
-    app: logic_serv
+    app: logic
