@@ -38,4 +38,17 @@ spec:
     protocol: TCP          
     targetPort: 80         
   selector:                
-    app: frontend      
+    app: frontend
+    
+apiVersion: v1
+kind: Pod                                            
+metadata:
+  name: frontend
+  labels:
+    app: frontend                                 
+spec:                                                
+  containers:
+    - image: tx640/hw5_front:v1 
+      name: frontend                              
+      ports:
+        - containerPort: 80                          
