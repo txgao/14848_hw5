@@ -21,7 +21,7 @@ spec:
         app: frontend                                  
     spec:
       containers:
-        - image: tx640/hw5_front:v1
+        - image: tx640/hw5_front:v2
           imagePullPolicy: Always                         
           name: frontend
           ports:
